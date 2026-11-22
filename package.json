@@ -1,0 +1,20 @@
+{
+  "name": "saas-webhook-recovery",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/recovery_service.ts",
+    "plan": "tsx src/plan_recovery.ts",
+    "test": "node --import tsx --test test/recovery_plan.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

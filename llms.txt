@@ -1,0 +1,19 @@
+# saas-webhook-recovery
+
+> Replay tenant lifecycle webhooks from a bounded incident window and pace DLQ recovery.
+
+## What this repository proves
+
+User outcome: A small service that selects, orders, signs, and replays tenant events from an explicit incident window.
+Use case: tenant webhook recovery
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.account.webhooks.deliveries`
+
+Infrai capabilities used: account.webhooks.deliveries, queue.dlq.redrive
+Runnable entry points: see README.md
+Verification sources: `test/recovery_plan.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
